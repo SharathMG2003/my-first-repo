@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.about-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 100px;
+}
+
+.about-box:hover {
+    transform: scale(1.05);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+
+    </style>
+  
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="item.html">Menu</a></li>
+                <li><a href="gallery.html">Gallary</a></li>
+                <li><a href="Aboutus.html">AboutUS</a></li>
+            </ul>
+        </div>
+    </nav>
+    <style>
+        .navbar {
+    background-color: black;  
+    padding: 15px 0; 
+    text-align: center; 
+    position: fixed;  
+    width: 100%;
+    top: 0;  
+    left: 0; 
+    z-index: 1000; 
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+.nav-container ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    gap: 20px; 
+}
+
+.nav-container ul li {
+    display: inline-block; 
+}
+
+
+.nav-container ul li a {
+    color: white;  
+    text-decoration: none;  
+    font-size: 18px; 
+    padding: 10px 15px;  
+    transition: 0.3s ease-in-out; 
+}
+
+
+.nav-container ul li a:hover {
+    color: yellow; 
+    border-bottom: 2px solid yellow;
+}
+
+
+@media (max-width: 768px) {
+    .nav-container ul {
+        flex-direction: column; 
+        gap: 10px;
+    }
+}
+
+    </style>
+
+   
+
+    <!-- About Us Content -->
+    <section class="about-content">
+        <div class="about-box">
+            <img src="location.jpeg" alt="Location" class="contact-icon"/>
+            <h2>Our Location</h2>
+            <p> Tiptur,hassancurcal 200023<p>
+        </div>
+
+        <div class="about-box">
+            <img src="phone.jpeg" alt="phone" class="contact-icon"/>
+            <h2>Bookings</h2>
+            <p>01278954</p>
+        </div>
+
+        <div class="about-box">
+            <img src="email.jpeg" alt="email" class="contact-icon"/>
+            <h2>Official Email</h2>
+            <p>Tipturhassan.09@gimal.com<p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Grand</h3>
+                <p>123 Main Street, Tiptur, India</p>
+                <p>Phone: +01278954</p>
+                <p>Email: info@hotelname.com</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><img src="book.jpeg" alt="Facebook"></a>
+                <a href="#"><img src="insta.jpeg" alt="Instagram"></a>
+                <a href="#"><img src="twitter.jpeg" alt="Twitter"></a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 Hotel Name. All Rights Reserved.</p>
+    </footer>
+    <style>
+        .footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-info,
+.footer-links,
+.footer-social {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a img {
+    width: 30px;
+    margin: 5px;
+}
+
+.footer-copy {
+    margin-top: 20px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+    </style>
+    
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <style>
+        /* menu*/
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .menu-tab {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px;
+            gap: 10px;
+            justify-content: center;
+            
+        }
+
+        .tab {
+            border: 2px solid black;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s ease-in-out;
+        }
+        .tab:hover{
+            background-color: black;
+            color: white;
+            transform: 0.3s ease-in-out;
+        }
+
+        .tab.active {
+            background: black;
+            color: white;
+        }
+
+        #menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .holl {
+            margin-bottom: 150px;
+            
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+}
+
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            scroll-margin-top: 80px; 
+        }
+
+        .menu-item {
+            width: 250px;
+            margin: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            background: white;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="item.html">Menu</a></li>
+                <li><a href="gallery.html">Gallary</a></li>
+                <li><a href="Aboutus.html">AboutUS</a></li>
+            </ul>
+        </div>
+    </nav>
+    <style>
+        /*nav bar*/
+
+        .navbar {
+    background-color: black;  
+    padding: 15px 0; 
+    text-align: center; 
+    position: fixed;  
+    width: 100%;
+    top: 0;  
+    left: 0; 
+    z-index: 1000; 
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+.nav-container ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    gap: 20px; 
+}
+
+.nav-container ul li {
+    display: inline-block; 
+}
+
+
+.nav-container ul li a {
+    color: white;  
+    text-decoration: none;  
+    font-size: 18px; 
+    padding: 10px 15px;  
+    transition: 0.3s ease-in-out; 
+}
+
+
+.nav-container ul li a:hover {
+    color: yellow; 
+    border-bottom: 2px solid yellow;
+}
+
+
+@media (max-width: 768px) {
+    .nav-container ul {
+        flex-direction: column; 
+        gap: 10px;
+    }
+}
+</style>
+
+    <header>
+        <h1>Food Menu</h1>
+    </header>
+
+    <div class="menu-tab">
+        <button class="tab" onclick="scrollToCategory('starters')">Veg Items</button>
+        <button class="tab" onclick="scrollToCategory('dosa')">Dosa</button>
+        <button class="tab" onclick="scrollToCategory('idly')">Idly</button>
+        <button class="tab" onclick="scrollToCategory('parotta')">Parotta</button>
+        <button class="tab" onclick="scrollToCategory('uthappam')">Chaat</button>
+        <button class="tab" onclick="scrollToCategory('desserts')">Ice Creams</button>
+        <button class="tab" onclick="scrollToCategory('drinks')">Drinks</button>
+    </div>
+
+    <section id="menu-items">
+        <h2 class="holl"> Veg Items</h2>
+        <div class="menu starters" id="starters">
+         
+            <div class="menu-item">
+                <img src="vegitm.jpeg" alt="Veg Item">
+                <h3>Utta</h3>
+                <p>Price: <strong>Rs.50</strong></p>
+            </div>
+            <div class="menu-item">
+                <img src="vegitem1.jpg" alt="Chilli Paneer">
+                <h3>Chilli Paneer <span>🟢</span></h3>
+                <p>Price: <strong>€10.99</strong></p>
+            </div>
+        </div>
+
+        </div>
+        <h2 class="holl"> Dose</h2>
+        <div class="menu dosa" id="dosa">
+            <div class="menu-item">
+                <img src="masala.jpeg" alt="Masala Dosa">
+                <h3>Masala Dosa</h3>
+                <p>Price: <strong>Rs.50</strong></p>
+            </div>
+            <div class="menu-item">
+                <img src="bennedosa.jpeg" alt="Masala Dosa">
+                <h3>BenneDose <span>🟢</span></h3>
+                <p>Price: <strong>Rs.40</strong></p>
+            </div>
+        </div>
+        <h2 class="holl"> Idly</h2>
+
+        <div class="menu idly" id="idly">
+            <div class="menu-item">
+                <img src="ravaidli.jpeg" alt="Rava Idly">
+                <h3>Rava Idly</h3>
+                <p>Price: <strong>Rs.50</strong></p>
+            </div>
+            <div class="menu-item">
+                <img src="ragiidli.jpeg" alt="Idly">
+                <h3>Ragi  Idly <span>🟢</span></h3>
+                <p>Price: <strong>Rs.60</strong></p>
+            </div>
+
+        </div>
+        <h2 class="holl"> Parotta</h2>
+
+        <div class="menu parotta" id="parotta">
+            <div class="menu-item">
+                <img src="parotta1.jpeg" alt="Parotta">
+                <h3>Parotta</h3>
+                <p>Price: <strong>Rs.40</strong></p>
+            </div>
+            <div class="menu-item">
+                <img src="pannirparoota.jpeg" alt="Parotta">
+                <h3>Pannir Parotta <span>🟢</span></h3>
+                <p>Price: <strong>Rs.100</strong></p>
+            </div>
+
+        </div>
+
+        <h2 class="holl"> chaat</h2>
+
+        <div class="menu uthappam" id="uthappam">
+            <div class="menu-item">
+                <img src="gobi.jpeg" alt="Uthappam">
+                <h3>Gobi Manchuri <span>🟢</span></h3>
+                <p>Price: <strong>Rs.80</strong></p>
+            </div>
+            <div class="menu-item">
+                <img src="masala.jpeg" alt="Uthappam">
+                <h3>masal puri <span>🟢</span></h3>
+                <p>Price: <strong>Rs.50</strong></p>
+            </div>
+        </div>
+
+        <h2 class="holl"> Ice Creams</h2>
+
+        <div class="menu desserts" id="desserts">
+            <div class="menu-item">
+                <img src="chocolat.jpeg" alt="Gulab Jamun">
+                <h3>chocolate <span>🟢</span></h3>
+                <p>Price: <strong>Rs.30</strong></p>
+            </div>
+            <div class="menu-item">
+                <img src="valina.jpeg" alt="Gulab Jamun">
+                <h3>vanila <span>🟢</span></h3>
+                <p>Price: <strong>Rs.30</strong></p>
+            </div>
+        </div>
+
+        <h2 class="holl"> Drinks</h2>
+        <!-- Drinks -->
+        <div class="menu drinks" id="dri">
+            <div class="menu-item">
+                <img src="apple.jpeg" alt="Lassi">
+                <h3>apple Lassi <span>🟢</span></h3>
+                <p>Price: <strong>Rs.40</strong></p>
+            </div>
+            <div class="menu-item">
+                <img src="banana.jpeg" alt="Lassi">
+                <h3>Bananna Lassi <span>🟢</span></h3>
+                <p>Price: <strong>Rs.50</strong></p>
+            </div>
+</div>
+
+    </section>
+
+    <script>
+        function scrollToCategory(category) {
+            let element = document.getElementById(category);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Grand</h3>
+                <p>123 Main Street, Tiptur, India</p>
+                <p>Phone: +01278954</p>
+                <p>Email: info@hotelname.com</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><img src="book.jpeg" alt="Facebook"></a>
+                <a href="#"><img src="insta.jpeg" alt="Instagram"></a>
+                <a href="#"><img src="twitter.jpeg" alt="Twitter"></a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 Hotel Name. All Rights Reserved.</p>
+    </footer>
+    <style>
+        .footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    }
+    
+    .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    }
+    
+    .footer-info,
+    .footer-links,
+    .footer-social {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    }
+    
+    .footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    }
+    
+    .footer p {
+    font-size: 14px;
+    }
+    
+    .footer-links ul {
+    list-style: none;
+    padding: 0;
+    }
+    
+    .footer-links ul li {
+    margin: 5px 0;
+    }
+    
+    .footer-links a {
+    color: white;
+    text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+    text-decoration: underline;
+    }
+    
+    .footer-social a img {
+    width: 30px;
+    margin: 5px;
+    }
+    
+    .footer-copy {
+    margin-top: 20px;
+    font-size: 12px;
+    opacity: 0.7;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    }
+    
+    </style>
+    
+</body>
+</html>
