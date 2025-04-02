@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title><style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            background-color: white;
+            padding:20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .h2{
+            text-align: center;
+            color: #333;
+        }
+        label{
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input, select ,button{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border:1px solid #ccc;
+            border-radius: 5px;
+        }
+        button{
+          background: #28a745;
+          color: white;
+          border: none;
+          cursor: pointer;
+          margin-top: 15px;
+        }
+        button:hover{
+            background: #218838;
+        }
+        .message{
+            display: none;
+            text-align: center;
+            color: green;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Table Reservation</h2>
+        <form id="reservationform">
+            <label for="name">Full Name</label>
+            <input type="text" id="name"  required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+            <p id="dateError" class="error"></p>
+
+            <label for="time">Time</label>
+            <input type="time" id="time" required>
+            <p id="timeError" class="error"></p>
+
+            <label for="guests">Number of Guests</label>
+            <select id="guests" required>
+                <option value="">select Guests</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 Person</option>
+                <option value="3">3Person</option>
+                <option value="4">4 Person</option>
+                <option value="5+">5+ Person</option>
+            </select>
+            <label for="table">Select Table</label>
+            <select id="table" required>
+                <option value="">Choose a Table</option>
+                <option value="Window">Window Set</option>
+                <option value="Garden">Garden View</option>
+                <option value="Private">Private Booth</option>
+            </select>
+            <button type="submit">Reserve Now</button>
+        </form>
+        <p class="message" id="successMessage">Your reservation has been confirmed!</p>
+    </div>
+    <script>
+        document.getElementById("reservationform").addEventListener("submit",function(event){
+            event.preventDefault();
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let date = document.getElementById("date").value;
+            let time = document.getElementById("time").value;
+            let guests = document.getElementById("guests").value;
+            let table = document.getElementById("table").value;
+
+            let dateError = document.getElementById("dateError");
+            let timeError =document.getElementById("timeError");
+
+            dateError.textContent ="";
+            timeError.textContent ="";
+
+            if(name ===""|| email ==="" || date ==="" || time === "" || guests ==="" || table === ""){
+                alert("Please fill in all fields.");
+                
+                return;
+            }
+            
+            let selectedDate =new Date(date);
+            let today= new Date();
+
+            today.setHours(0,0,0,0);
+
+            if(selectedDate<today){
+                dateError.textContent = "❌ You cannot reserve a table for a past date.";
+
+                return;
+            }
+
+            let currentTime = new Date();
+            let selectedDateTime =new Date(date +"T"+time);
+
+            
+            
+            if (selectedDate.toDateString() === today.toDateString() && selectedDateTime < currentTime) {
+        timeError.textContent = "❌ You cannot reserve a table for a past time.";
+        return;
+    }
+
+    let twoHoursLater = new Date(currentTime.getTime() + 2 * 60 * 60 * 1000); // Add 2 hours
+
+            if(selectedDateTime < twoHoursLater){
+                timeError.textContent="Reservations must  be made  at least 2 hours in advance.";
+                return;
+            }
+
+
+            document.getElementById("successMessage").style.display="block";
+            this.reset();
+        });
+    </script>
+    
+</body>
+</html>

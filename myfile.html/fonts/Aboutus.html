@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About-us</title>
+  <style>
+   /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background-color:#ffe0b2 ;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Main Content Styling */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #ff9800;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #ffe0b2;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="item.html">Menu</a></li>
+            <li><a href="gallery.html">Gallary</a></li>
+            <li><a href="Aboutus.html">AboutUS</a></li>
+        </ul>
+    </div>
+</nav>
+
+<style>
+
+.navbar {
+    background-color: black;  
+    padding: 15px 0; 
+    text-align: center; 
+    position: fixed;  
+    width: 100%;
+    top: 0;  
+    left: 0; 
+    z-index: 1000; 
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+.nav-container ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    gap: 20px; 
+}
+
+.nav-container ul li {
+    display: inline-block; 
+    background-color:black ;
+}
+
+
+.nav-container ul li a {
+    color: white;  
+    text-decoration: none;  
+    font-size: 18px; 
+    padding: 10px 15px;  
+    transition: 0.3s ease-in-out; 
+}
+
+
+.nav-container ul li a:hover {
+    color: yellow; 
+    border-bottom: 2px solid yellow;
+}
+
+
+@media (max-width: 768px) {
+    .nav-container ul {
+        flex-direction: column; 
+        gap: 10px;
+    }
+}
+
+</style>
+
+  <header>
+    <h1>About us</h1>
+    <p>Wellcome to our Hoatel ! learn more about out story and mission</p>
+  </header>
+  <main>
+    <section>
+      <h2>Our stoty</h2>
+      <p>Our Hoatel is dedicated to providing  exceptional hospitality with a touch of elegance and tradition .From delicious cuisine to comfortabele stay , we strive to make your experience memorabel </p>
+    </section>
+    <section>
+      <h2> Our Mission</h2>
+      <p>We aim tp serve our guests with the best quality  food and server while maintining a warm and wellcome  environment.</p>
+    </section>\
+
+    <section\>
+      <h2> Why choose us?</h2>
+      <ul>
+        <li>Authentic and Delicious cuisine</li>
+        <li>Experience custemer service</li>
+        <li>Beautiful and comfortabel ambiance</li>
+        <li>Commitment to quality ans hygiene</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <h3>Grand</h3>
+            <p>123 Main Street, Tiptur, India</p>
+            <p>Phone: +01278954</p>
+            <p>Email: info@hotelname.com</p>
+        </div>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <a href="#"><img src="book.jpeg" alt="Facebook"></a>
+            <a href="#"><img src="insta.jpeg" alt="Instagram"></a>
+            <a href="#"><img src="twitter.jpeg" alt="Twitter"></a>
+        </div>
+    </div>
+    <p class="footer-copy">&copy; 2025 Hotel Name. All Rights Reserved.</p>
+</footer>
+<style>
+    .footer {
+background-color: #333;
+color: white;
+padding: 30px 0;
+text-align: center;
+}
+
+.footer-container {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+max-width: 1000px;
+margin: auto;
+}
+
+.footer-info,
+.footer-links,
+.footer-social {
+flex: 1;
+min-width: 250px;
+margin: 10px;
+}
+
+.footer h3 {
+font-size: 20px;
+margin-bottom: 10px;
+text-transform: uppercase;
+}
+
+.footer p {
+font-size: 14px;
+}
+
+.footer-links ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-links ul li {
+margin: 5px 0;
+background-color:#333;
+}
+
+.footer-links a {
+color: white;
+text-decoration: none;
+}
+
+.footer-links a:hover {
+text-decoration: underline;
+}
+
+.footer-social a img {
+width: 30px;
+margin: 5px;
+}
+
+.footer-copy {
+margin-top: 20px;
+font-size: 12px;
+opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.footer-container {
+    flex-direction: column;
+    text-align: center;
+}
+}
+
+</style>
+</body>
+</html>

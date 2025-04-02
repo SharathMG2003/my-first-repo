@@ -1,0 +1,79 @@
+body{
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url('fligh-1.jpg'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        height: 100vh;
+    
+    
+}
+.container {
+    
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+h2{
+    text-align: center;
+    color: rgb(20, 22, 22);
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+   margin-top: 10px;
+}
+input{
+    padding: 9px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button{
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border:none;
+    border-radius:5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #0056b3;
+}
+.container {
+    background-image: url('fligh-1.jpg');.container {
+        background-image: url('fligh-1.jpg'); /* Ensure the path is correct */
+        background-size: cover;
+        background-position: center;
+        
+        /* Remove background color or set transparency */
+        background-color: rgba(255, 255, 255, 0.8); /* Optional: Add transparency */
+        
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+    
+    background-size: cover;
+    background-position: center;
+    
+    
+    background-color: rgba(255, 255, 255, 0.8); 
+    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
